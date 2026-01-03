@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tambahan kustom untuk kenyamanan mobile */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent; /* Hapus warna biru saat tombol di-tap di Android */
+    user-select: none; /* Mencegah teks terpilih secara tidak sengaja saat transaksi cepat */
+  }
+}
+
+/* Animasi untuk daftar belanja agar terlihat smooth */
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Menghilangkan scrollbar tapi tetap bisa di-scroll (untuk kategori) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
