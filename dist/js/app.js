@@ -122,6 +122,12 @@ window.toggleScanner = function() {
         html5QrCode.stop().then(() => { container.classList.add('hidden'); scannerActive = false; });
     }
 };
-
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((reg) => console.log('Service Worker terdaftar!', reg))
+      .catch((err) => console.error('Gagal daftar Service Worker', err));
+  });
+ }
 // Start
 window.renderCart();
