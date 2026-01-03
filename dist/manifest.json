@@ -1,0 +1,8 @@
+{
+  "name": "POS Retail Jaya",
+  "short_name": "RetailPOS",
+  "start_url": "/pos-retail/index.html",
+  "display": "standalone",
+  "background_color": "#2563eb",
+  "theme_color": "#2563eb"
+}
